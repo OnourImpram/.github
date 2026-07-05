@@ -1,0 +1,36 @@
+name: Safety issue
+description: Report a privacy, evidence, automation, governance, or human oversight concern.
+title: "[Safety]: "
+labels: ["safety"]
+body:
+  - type: markdown
+    attributes:
+      value: "Do not include secrets, private data, or exploit details in a public issue. Use private vulnerability reporting for sensitive reports."
+  - type: textarea
+    id: concern
+    attributes:
+      label: Concern
+      description: What safety boundary may be failing?
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Privacy or data leakage
+        - Unsafe automation
+        - Weak evidence or unsupported claim
+        - Human approval bypass
+        - Prompt injection or untrusted input
+        - Documentation or expectation mismatch
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Potential impact
+      description: Explain who could be affected and how.
+    validations:
+      required: true
